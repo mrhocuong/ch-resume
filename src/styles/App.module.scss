@@ -1,38 +1,48 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 .App {
-  text-align: center;
+  .page {
+    .header {
+      height: 15.625rem;
+      border-bottom: 1px solid $primary--color;
+      .headerColumn {
+        display: flex;
+        .column {
+          width: 33.33%;
+          margin-top: 2.5rem;
+          &.first {
+            display: flex;
 
-  .AppLogo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .AppLogo {
-      animation: AppLogoSpin infinite 20s linear;
+            .content {
+              padding-left: 1.25rem;
+            }
+          }
+          &.seconds {
+            justify-content: center;
+            display: flex;
+            :global() {
+              img {
+                width: 11.2rem;
+                height: 11.2rem;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-
-  .AppHeader {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-
-  .AppLink {
-    color: #61dafb;
-  }
-
-  @keyframes AppLogoSpin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
+    .body {
+      display: flex;
+      .column {
+        width: 50%;
+        &.left {
+          :global() {
+            h2 {
+              padding-left: 60px;
+            }
+          }
+        }
+      }
     }
   }
 }

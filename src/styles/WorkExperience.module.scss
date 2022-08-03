@@ -1,0 +1,21 @@
+.workExperience {
+  padding-bottom: 40px;
+  .headerWrapper {
+    display: flex;
+    .header {
+      padding-left: 20px;
+      .title {
+        font-size: 1.5rem;
+      }
+      .company {
+        font-size: 1rem;
+      }
+      .range {
+        font-size: 1rem;
+      }
+    }
+  }
+  .content {
+    padding-left: 40px;
+  }
+}
