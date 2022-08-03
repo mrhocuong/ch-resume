@@ -1,9 +1,26 @@
 import A4Page from './components/A4Page';
 import PageTag from './components/PageTag';
+import SkillTag from './components/SkillTag';
 import WorkExperience from './components/WorkExperience';
 import Style from './styles/App.module.scss';
 
 function App() {
+  const skills = [
+    'Asp.Net Core',
+    'Entity Framework',
+    'Azure App Service',
+    'Azure DevOps',
+    'Reactjs',
+    'VueJs',
+    'Micro-services',
+    'SignalR',
+    'RESTful API',
+    'Git',
+    'Redis',
+    'Kubernetes',
+    'Docker',
+    'Ubuntu',
+  ];
   return (
     <div className={Style.App}>
       <A4Page>
@@ -37,6 +54,7 @@ function App() {
             <div className={`${Style.column} ${Style.left}`}>
               <h2>WORK EXPERIENCE</h2>
               <WorkExperience
+                hasTag
                 title={'Technical Leader'}
                 range={'Jun 2020 - Dec 2020'}
                 company={'FPT Software - Vietnam'}
@@ -47,6 +65,7 @@ function App() {
                 ]}
               />
               <WorkExperience
+                hasTag
                 title={'Senior Full-stack Software Developer'}
                 range={'Jun 2020 - Dec 2020'}
                 company={'Coinhako - Singapore'}
@@ -58,6 +77,7 @@ function App() {
                 ]}
               />
               <WorkExperience
+                hasTag
                 title={'Full-stack Software Developer'}
                 range={'Jun 2020 - Dec 2020'}
                 company={'Saigon Technology Software - Vietnam'}
@@ -69,27 +89,42 @@ function App() {
                 ]}
               />
             </div>
-            <div className={Style.column}></div>
+            <div className={`${Style.column} ${Style.right}`}>
+              <h2>Skills</h2>
+              {skills.map((skill) => (
+                <SkillTag name={skill} />
+              ))}
+              <h2>EDUCATION</h2>
+              <WorkExperience
+                hasTag={false}
+                title={'FPT University'}
+                company={'Software Engineering'}
+                range={'Oct 2011 - Oct 2016'}
+                achievements={[]}
+              />
+            </div>
           </div>
         </div>
       </A4Page>
 
       <A4Page>
-        <div className={Style.body}>
-          <div className={`${Style.column} ${Style.left}`}>
-            <h2>WORK EXPERIENCE</h2>
-            <WorkExperience
-              title={'Full-stack Developer'}
-              range={'Jun 2020 - Dec 2020'}
-              company={'FPT Software - Vietnam'}
-              achievements={[
-                'Transform a Material Management System built by Webform to Web Application',
-                'Develop backend by C#, .Net Framework 4.5, MVC, Entity Framework, and Oracle database',
-                'Develop frontend using Bootstraps and Jquery, ASP.NET Razor',
-              ]}
-            />
+        <div className={Style.page}>
+          <div className={`${Style.body} ${Style.secondPage}`}>
+            <div className={`${Style.column} ${Style.left}`}>
+              <WorkExperience
+                hasTag
+                title={'Full-stack Developer'}
+                range={'Jun 2020 - Dec 2020'}
+                company={'FPT Software - Vietnam'}
+                achievements={[
+                  'Transform a Material Management System built by Webform to Web Application',
+                  'Develop backend by C#, .Net Framework 4.5, MVC, Entity Framework, and Oracle database',
+                  'Develop frontend using Bootstraps and Jquery, ASP.NET Razor',
+                ]}
+              />
+            </div>
+            <div className={Style.column}></div>
           </div>
-          <div className={Style.column}></div>
         </div>
       </A4Page>
     </div>

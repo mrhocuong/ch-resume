@@ -33,6 +33,9 @@
     }
     .body {
       display: flex;
+      &.secondPage {
+        padding-top: 40px;
+      }
       .column {
         width: 50%;
         &.left {
@@ -41,6 +44,9 @@
               padding-left: 60px;
             }
           }
+        }
+        &.right {
+          padding-left: 20px;
         }
       }
     }

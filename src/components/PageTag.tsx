@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Style from '../styles/PageTag.module.scss';
 
 interface PageTagProps {
+  isSecondary?: boolean;
   position?: 'left' | 'right';
 }
 const PageTag: FC<PageTagProps> = (props) => {
@@ -9,7 +10,7 @@ const PageTag: FC<PageTagProps> = (props) => {
     <div
       className={`${Style.tag} ${
         props.position === 'right' ? Style.right : null
-      }`}
+      }  ${props.isSecondary ? Style.secondary : null}`}
     ></div>
   );
 };

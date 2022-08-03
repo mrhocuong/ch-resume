@@ -6,4 +6,8 @@
   &.right {
     float: right;
   }
+
+  &.secondary {
+    background-color: $secondary--color;
+  }
 }
