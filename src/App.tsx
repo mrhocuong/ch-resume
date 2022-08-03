@@ -1,3 +1,15 @@
+import { faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons';
+import {
+  faCoffee,
+  faElevator,
+  faEnvelope,
+  faLocation,
+  faPhone,
+  faPhoneAlt,
+  faPhoneSlash,
+  faPhoneSquare,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import A4Page from './components/A4Page';
 import PageTag from './components/PageTag';
 import SkillTag from './components/SkillTag';
@@ -42,11 +54,23 @@ function App() {
                 />
               </div>
               <div className={`${Style.column} ${Style.third}`}>
-                <p>cuonghh913@gmail.com</p>
-                <p>+84 79 23 10 456</p>
-                <p> Ho Chi Minh City, Vietnam</p>
-                <p> linkedin.com/in/cuongho913</p>
-                <p>cuonghh913</p>
+                <p>
+                  <FontAwesomeIcon icon={faEnvelope} /> cuonghh913@gmail.com
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faPhone} /> +84 79 23 10 456
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faLocation} /> Ho Chi Minh City,
+                  Vietnam
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faLinkedin} />{' '}
+                  linkedin.com/in/cuongho913
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faSkype} /> cuonghh913
+                </p>
               </div>
             </div>
           </div>
