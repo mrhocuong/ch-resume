@@ -1,13 +1,8 @@
 import { faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons';
 import {
-  faCoffee,
-  faElevator,
   faEnvelope,
-  faLocation,
+  faLocationDot,
   faPhone,
-  faPhoneAlt,
-  faPhoneSlash,
-  faPhoneSquare,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import A4Page from './components/A4Page';
@@ -61,7 +56,7 @@ function App() {
                   <FontAwesomeIcon icon={faPhone} /> +84 79 23 10 456
                 </p>
                 <p>
-                  <FontAwesomeIcon icon={faLocation} /> Ho Chi Minh City,
+                  <FontAwesomeIcon icon={faLocationDot} /> Ho Chi Minh City,
                   Vietnam
                 </p>
                 <p>
@@ -78,6 +73,7 @@ function App() {
             <div className={`${Style.column} ${Style.left}`}>
               <h2>WORK EXPERIENCE</h2>
               <WorkExperience
+                key={'1'}
                 hasTag
                 title={'Technical Leader'}
                 range={'Jun 2020 - Dec 2020'}
@@ -89,6 +85,7 @@ function App() {
                 ]}
               />
               <WorkExperience
+                key={'2'}
                 hasTag
                 title={'Senior Full-stack Software Developer'}
                 range={'Jun 2020 - Dec 2020'}
@@ -101,6 +98,7 @@ function App() {
                 ]}
               />
               <WorkExperience
+                key={'3'}
                 hasTag
                 title={'Full-stack Software Developer'}
                 range={'Jun 2020 - Dec 2020'}
@@ -115,8 +113,8 @@ function App() {
             </div>
             <div className={`${Style.column} ${Style.right}`}>
               <h2>Skills</h2>
-              {skills.map((skill) => (
-                <SkillTag name={skill} />
+              {skills.map((skill, i) => (
+                <SkillTag key={i} name={skill} />
               ))}
               <h2>EDUCATION</h2>
               <WorkExperience
@@ -136,6 +134,7 @@ function App() {
           <div className={`${Style.body} ${Style.secondPage}`}>
             <div className={`${Style.column} ${Style.left}`}>
               <WorkExperience
+                key={'4'}
                 hasTag
                 title={'Full-stack Developer'}
                 range={'Jun 2020 - Dec 2020'}

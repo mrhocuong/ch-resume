@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import Style from '../styles/WorkExperience.module.scss';
 import PageTag from './PageTag';
 interface IA4PageProps {
@@ -23,7 +23,7 @@ const WorkExperience: FC<IA4PageProps> = (props) => {
       <div className={Style.content}>
         <ul>
           {achievements.map((achievement) => (
-            <li>{achievement}</li>
+            <li key={achievement}>{achievement}</li>
           ))}
         </ul>
       </div>
