@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import Style from '../styles/A4Page.module.scss';
+import Style from '../../styles/Shared/A4Page.module.scss';
 interface IA4PageProps {
   children?: ReactNode;
 }

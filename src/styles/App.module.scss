@@ -12,20 +12,28 @@
           margin-top: 2.5rem;
           &.first {
             display: flex;
-
             .content {
               padding-left: 1.25rem;
+              h1 {
+                color: $primary--color;
+              }
+              h3 {
+                color: $secondary--color;
+              }
+              a {
+                color: black;
+              }
             }
           }
           &.seconds {
             justify-content: center;
             display: flex;
-            :global() {
-              img {
-                width: 11.2rem;
-                height: 11.2rem;
-                border-radius: 50%;
-              }
+            img {
+              width: 11.2rem;
+              height: 11.2rem;
+              border-radius: 50%;
+              object-fit: cover;
+              border: solid 5px $secondary--color;
             }
           }
         }
@@ -39,16 +47,17 @@
       .column {
         width: 50%;
         &.left {
-          :global() {
-            h2 {
-              padding-left: 60px;
-            }
+          h2 {
+            padding-left: 60px;
           }
         }
         &.right {
           padding-left: 20px;
         }
       }
+    }
+    .experienceCardCustom {
+      padding-bottom: 15px;
     }
   }
 }

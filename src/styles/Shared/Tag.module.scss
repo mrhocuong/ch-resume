@@ -1,0 +1,20 @@
+@import '../variables';
+.skillTag {
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  &.primary {
+    background: $primary--color;
+  }
+  &.secondary {
+    background: $secondary--color;
+  }
+  &.default {
+    background: white;
+    color: black;
+    border: 1px solid $primary--color;
+  }
+}

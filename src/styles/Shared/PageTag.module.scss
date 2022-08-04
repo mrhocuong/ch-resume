@@ -1,12 +1,8 @@
-@import './variables';
+@import '../variables';
 .tag {
   width: 2.5rem;
   height: 4.375rem;
   background-color: $primary--color;
-  &.right {
-    float: right;
-  }
-
   &.secondary {
     background-color: $secondary--color;
   }
