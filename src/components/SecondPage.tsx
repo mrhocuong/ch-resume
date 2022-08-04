@@ -14,7 +14,7 @@ const SecondPage: FC = () => {
               hasTag
               key={'4'}
               title={'Full-stack Developer'}
-              note={'Jun 2020 - Dec 2020'}
+              note={'10/2014 - 04/2015,'}
               subtitle={'FPT Software - Vietnam'}
               achievements={[
                 'Transform a Material Management System built by Webform to Web Application',

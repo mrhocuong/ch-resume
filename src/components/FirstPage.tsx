@@ -15,6 +15,7 @@ import ExperienceCard from './Shared/ExperienceCard';
 import PageTag from './Shared/PageTag';
 import Skills from './Skills';
 import avatar from '../assets/avatar.png';
+import Languages from './Languages';
 
 const FirstPage: FC = () => {
   return (
@@ -66,10 +67,23 @@ const FirstPage: FC = () => {
             <ExperienceCard
               hasTag
               cssClasses={Style.experienceCardCustom}
+              key={'1-1'}
+              title={'Senior Full-stack Software Developer'}
+              subtitle={'Creative Technology - Aurecon Vietnam'}
+              note={'12/2020 - Present'}
+              achievements={[
+                "Research and develop solution base on client's requirement",
+                'Coach team members',
+                'Delegating tasks and set deadlines for team',
+              ]}
+            />
+            <ExperienceCard
+              hasTag
+              cssClasses={Style.experienceCardCustom}
               key={'1'}
               title={'Technical Leader'}
               subtitle={'FPT Software - Vietnam'}
-              note={'Jun 2020 - Dec 2020'}
+              note={'06/2020 - 12/2020'}
               achievements={[
                 "Research and develop solution base on client's requirement",
                 'Coach team members',
@@ -81,10 +95,10 @@ const FirstPage: FC = () => {
               hasTag
               key={'2'}
               title={'Senior Full-stack Software Developer'}
-              note={'Jun 2020 - Dec 2020'}
+              note={'01/2018 - 04/2020'}
               subtitle={'Coinhako - Singapore'}
               achievements={[
-                'Design and implement the microservices system ( .Net Core 2.2, Angular 7, VueJs, Redis, Hangfire...etc)',
+                'Design and implement the microservices system (.Net Core 2.2, Angular 7, VueJs, Redis, Hangfire...etc)',
                 'Build a scalable system. Using Kubernetes and Docker container for deployment on Azure App Service and GCP',
                 'Set up CI/CD by Azure DevOps',
                 'Manage the team has 5 members using the Scrum process',
@@ -95,7 +109,7 @@ const FirstPage: FC = () => {
               hasTag
               key={'3'}
               title={'Full-stack Software Developer'}
-              note={'Jun 2020 - Dec 2020'}
+              note={'05/2016 - 12/2017'}
               subtitle={'Saigon Technology Software - Vietnam'}
               achievements={[
                 'Lead the backend team to build a Real Estate Management System using .Net Core 1.0 and ElasticSearch. Support the mobile team to develop the application using React Native',
@@ -109,6 +123,7 @@ const FirstPage: FC = () => {
             <Skills />
             <Educations />
             <Organizations />
+            <Languages />
             <Interests />
           </div>
         </div>
