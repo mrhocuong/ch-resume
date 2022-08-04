@@ -1,0 +1,24 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+.page {
+  .body {
+    display: flex;
+    &.secondPage {
+      padding-top: 40px;
+    }
+    .column {
+      width: 50%;
+      &.left {
+        h2 {
+          padding-left: 60px;
+        }
+      }
+      &.right {
+        padding-left: 20px;
+      }
+    }
+  }
+  .experienceCardCustom {
+    padding-bottom: 15px;
+  }
+}

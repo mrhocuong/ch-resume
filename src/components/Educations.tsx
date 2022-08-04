@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import ExperienceCard from './Shared/ExperienceCard';
-const Edications: FC = () => {
+const Educations: FC = () => {
   return (
     <>
       <h2>EDUCATION</h2>
@@ -14,4 +14,4 @@ const Edications: FC = () => {
   );
 };
 
-export default Edications;
+export default Educations;
