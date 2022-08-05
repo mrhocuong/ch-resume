@@ -13,7 +13,7 @@ const Organizations: FC = () => {
       <ExperienceCard
         cssClasses={Style.organizationCardCustom}
         title={'Fpt Software (06/2020 - 12/2020)'}
-        subtitle={'Full-stack Developer'}
+        subtitle={'Technical Leader'}
       />
       <ExperienceCard
         cssClasses={Style.organizationCardCustom}
