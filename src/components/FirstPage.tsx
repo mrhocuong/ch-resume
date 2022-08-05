@@ -12,7 +12,7 @@ import A4Page from './Shared/A4Page';
 import ExperienceCard from './Shared/ExperienceCard';
 import PageTag from './Shared/PageTag';
 import Skills from './Skills';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/avatar.jpg';
 import Languages from './Languages';
 interface IFirstPageProps {
   id?: string;

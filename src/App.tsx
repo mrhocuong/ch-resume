@@ -3,29 +3,46 @@ import FirstPage from './components/FirstPage';
 import SecondPage from './components/SecondPage';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const [img, setImg] = useState('');
+  const elementIds = ['firstPage', 'secondPage'];
+  const [captureResult, setCaptureResult] = useState<string[]>([]);
 
   const printDocument = () => {
-    const firstPage = document.getElementById('firstPage');
-    if (firstPage) {
-      html2canvas(firstPage, {
-        allowTaint: true,
-        backgroundColor: null,
-      }).then((canvas) => {
-        const imgData = canvas.toDataURL('image/jpeg', 1);
-        setImg(imgData);
-        if (imgData) {
-          const pdf = new jsPDF();
-          pdf.addImage(imgData, 'PNG', 0, 0, 0, 0);
-          pdf.save('download.pdf');
-        }
-      });
+    const promiseArray = [];
+    for (let i = 0; i < elementIds.length; i++) {
+      const elementId = elementIds[i];
+      console.log('??', elementId);
+      const page = document.getElementById(elementId);
+      if (page) {
+        var promiseWait = html2canvas(page, {
+          allowTaint: true,
+          backgroundColor: null,
+        });
+        promiseArray.push(promiseWait);
+      }
     }
+    Promise.all(promiseArray).then((arrayOfAllResolvedValues) => {
+      setCaptureResult(
+        arrayOfAllResolvedValues.map((canvas) =>
+          canvas.toDataURL('image/jpeg', 1)
+        )
+      );
+    });
   };
+  useEffect(() => {
+    console.log(captureResult);
+    if (elementIds.length === captureResult.length) {
+      const pdf = new jsPDF();
 
+      for (let i = 0; i < captureResult.length; i++) {
+        if (i !== 0) pdf.addPage();
+        pdf.addImage(captureResult[i], 'PNG', 0, 0, 0, 0);
+      }
+      pdf.save('download.pdf');
+    }
+  }, [captureResult, elementIds.length]);
   return (
     <div className={Style.App}>
       <button onClick={printDocument}>Print</button>
