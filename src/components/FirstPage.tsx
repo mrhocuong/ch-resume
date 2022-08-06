@@ -98,7 +98,7 @@ const FirstPage: FC<IFirstPageProps> = (props) => {
               note={'01/2018 - 04/2020'}
               subtitle={'Coinhako - Singapore'}
               achievements={[
-                'Design and implement the microservices and scalable system (.Net Core 2.2, Angular 7, VueJs, Redis, Hangfire, Kubernetes, Docker, Azure...etc)',
+                'Design and implement the micro-services and scalable system (.Net Core 2.2, Angular 7, VueJs, Redis, Hangfire, Kubernetes, Docker, Azure...etc)',
                 'Manage the team has 5 members by the Scrum process',
               ]}
             />

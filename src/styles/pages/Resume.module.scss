@@ -1,0 +1,63 @@
+@import '../variables';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+.App {
+  .page {
+    .header {
+      height: 15.625rem;
+      border-bottom: 1px solid $primary--color;
+      .headerColumn {
+        display: flex;
+        .column {
+          width: 33.33%;
+          margin-top: 2.5rem;
+          &.first {
+            display: flex;
+            .content {
+              padding-left: 1.25rem;
+              h1 {
+                color: $primary--color;
+              }
+              h3 {
+                color: $secondary--color;
+              }
+              a {
+                color: black;
+              }
+            }
+          }
+          &.seconds {
+            justify-content: center;
+            display: flex;
+            img {
+              width: 11.2rem;
+              height: 11.2rem;
+              border-radius: 50%;
+              object-fit: cover;
+              border: solid 5px $secondary--color;
+            }
+          }
+        }
+      }
+    }
+    .body {
+      display: flex;
+      &.secondPage {
+        padding-top: 40px;
+      }
+      .column {
+        width: 50%;
+        &.left {
+          h2 {
+            padding-left: 60px;
+          }
+        }
+        &.right {
+          padding-left: 20px;
+        }
+      }
+    }
+    .experienceCardCustom {
+      padding-bottom: 15px;
+    }
+  }
+}
