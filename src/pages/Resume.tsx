@@ -1,6 +1,6 @@
 import { faBars, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import html2canvas from 'html2canvas';
+import { toJpeg } from 'html-to-image';
 import jsPDF from 'jspdf';
 import moment from 'moment';
 import { FC, useEffect, useState } from 'react';
@@ -14,23 +14,22 @@ const Resume: FC = () => {
   const [captureResult, setCaptureResult] = useState<string[]>([]);
 
   const printDocument = () => {
-    const promiseArray = [];
     for (let i = 0; i < elementIds.length; i++) {
       const elementId = elementIds[i];
       const page = document.getElementById(elementId);
       if (page) {
-        var promiseWait = html2canvas(page, {
-          allowTaint: true,
-          backgroundColor: null,
+        const currentMargin = page.style.margin;
+        page.style.margin = '0';
+        var tojs = toJpeg(page, { quality: 1 });
+        Promise.all([tojs]).then((arr) => {
+          setCaptureResult((current) => {
+            return [...arr, ...current];
+          });
+          console.log('cc', page.style.margin, currentMargin);
+          page.style.margin = '1cm auto';
         });
-        promiseArray.push(promiseWait);
       }
     }
-    Promise.all(promiseArray).then((arrayOfAllResolvedValues) => {
-      setCaptureResult(
-        arrayOfAllResolvedValues.map((canvas) => canvas.toDataURL('image/jpeg'))
-      );
-    });
   };
 
   useEffect(() => {
@@ -44,8 +43,8 @@ const Resume: FC = () => {
         'DDMMMyyyy_HHmm'
       )}.pdf`;
 
-      // pdf.save(fileName);
-      // setCaptureResult([]);
+      pdf.save(fileName);
+      setCaptureResult([]);
     }
   }, [captureResult, elementIds.length]);
 
@@ -59,10 +58,6 @@ const Resume: FC = () => {
           {<FontAwesomeIcon icon={faDownload} />}
         </Action>
       </Fab>
-      {captureResult &&
-        captureResult.map((x, i) => (
-          <img style={{ display: 'inherit' }} src={x} alt={`img-${i}`} />
-        ))}
       <FirstPage id='firstPage' />
       <SecondPage id='secondPage' />
     </div>
