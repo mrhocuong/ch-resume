@@ -4,7 +4,7 @@
   .page {
     .header {
       height: 15.625rem;
-      border-bottom: 1px solid $primary--color;
+      border-bottom: 0.0625rem solid $primary--color;
       .headerColumn {
         display: flex;
         .column {
@@ -33,7 +33,7 @@
               height: 11.2rem;
               border-radius: 50%;
               object-fit: cover;
-              border: solid 5px $secondary--color;
+              border: solid 0.3125rem $secondary--color;
             }
           }
         }
@@ -42,22 +42,22 @@
     .body {
       display: flex;
       &.secondPage {
-        padding-top: 40px;
+        padding-top: 2.5rem;
       }
       .column {
         width: 50%;
         &.left {
           h2 {
-            padding-left: 60px;
+            padding-left: 3.75rem;
           }
         }
         &.right {
-          padding-left: 20px;
+          padding-left: 1.25rem;
         }
       }
     }
     .experienceCardCustom {
-      padding-bottom: 15px;
+      padding-bottom: 0.9375rem;
     }
   }
 }

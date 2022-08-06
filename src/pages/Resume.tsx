@@ -1,4 +1,4 @@
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -32,6 +32,7 @@ const Resume: FC = () => {
       );
     });
   };
+
   useEffect(() => {
     if (elementIds.length === captureResult.length) {
       const pdf = new jsPDF('p', 'mm', 'a4');
@@ -39,22 +40,29 @@ const Resume: FC = () => {
         if (i !== 0) pdf.addPage('a4', 'p');
         pdf.addImage(captureResult[i], 'PNG', 0, 0, 0, 0);
       }
-      const fileName = `CuongHo's Resume-${moment().format(
+      const fileName = `Cuong Ho's Resume-${moment().format(
         'DDMMMyyyy_HHmm'
       )}.pdf`;
+
       // pdf.save(fileName);
       // setCaptureResult([]);
     }
   }, [captureResult, elementIds.length]);
+
   return (
-    <div className={Style.App}>
-      <Fab icon={<FontAwesomeIcon icon={faEnvelope} />}>
-        <Action text='Download Resume' onClick={printDocument} />
-        <Action text='Help' onClick={() => {}}>
-          <i className='fa fa-help' />
+    <div className={Style.resume}>
+      <Fab
+        icon={<FontAwesomeIcon icon={faBars} />}
+        mainButtonStyles={{ backgroundColor: '#313c4e' }}
+      >
+        <Action text='Download Resume' onClick={printDocument}>
+          {<FontAwesomeIcon icon={faDownload} />}
         </Action>
       </Fab>
-      {captureResult && captureResult.map((x) => <img src={x} />)}
+      {captureResult &&
+        captureResult.map((x, i) => (
+          <img style={{ display: 'inherit' }} src={x} alt={`img-${i}`} />
+        ))}
       <FirstPage id='firstPage' />
       <SecondPage id='secondPage' />
     </div>

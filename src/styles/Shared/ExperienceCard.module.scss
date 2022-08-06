@@ -3,7 +3,7 @@
   .headerWrapper {
     display: flex;
     .header {
-      padding-left: 20px;
+      padding-left: 1.25rem;
       .title {
         font-size: 1.25rem;
       }
@@ -17,9 +17,9 @@
     }
   }
   .content {
-    padding-left: 40px;
+    padding-left: 2.5rem;
     li {
-      line-height: 25px;
+      line-height: 1.5625rem;
     }
   }
 }
