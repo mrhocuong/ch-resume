@@ -1,4 +1,8 @@
-import { faBars, faDownload } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faDownload,
+  faMessage,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { toJpeg } from 'html-to-image';
 import jsPDF from 'jspdf';
@@ -9,8 +13,11 @@ import FirstPage from '../components/FirstPage';
 import SecondPage from '../components/SecondPage';
 import Loading from '../components/Shared/Loading';
 import Style from '../styles/pages/Resume.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Resume: FC = () => {
+  const navigate = useNavigate();
+
   const elementIds = ['firstPage', 'secondPage'];
   const [captureResult, setCaptureResult] = useState<string[]>([]);
   const [show, setShow] = useState(false);
@@ -57,6 +64,14 @@ const Resume: FC = () => {
       >
         <Action text='Download Resume' onClick={printDocument}>
           {<FontAwesomeIcon icon={faDownload} />}
+        </Action>
+        <Action
+          text='Chat With Me'
+          onClick={() => {
+            navigate('/chat-with-me');
+          }}
+        >
+          {<FontAwesomeIcon icon={faMessage} />}
         </Action>
       </Fab>
       <FirstPage id='firstPage' />
