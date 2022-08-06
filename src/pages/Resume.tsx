@@ -7,13 +7,15 @@ import { FC, useEffect, useState } from 'react';
 import { Fab, Action } from 'react-tiny-fab';
 import FirstPage from '../components/FirstPage';
 import SecondPage from '../components/SecondPage';
+import Loading from '../components/Shared/Loading';
 import Style from '../styles/pages/Resume.module.scss';
 
 const Resume: FC = () => {
   const elementIds = ['firstPage', 'secondPage'];
   const [captureResult, setCaptureResult] = useState<string[]>([]);
-
+  const [show, setShow] = useState(false);
   const printDocument = () => {
+    setShow(true);
     for (let i = 0; i < elementIds.length; i++) {
       const elementId = elementIds[i];
       const page = document.getElementById(elementId);
@@ -45,6 +47,7 @@ const Resume: FC = () => {
 
       pdf.save(fileName);
       setCaptureResult([]);
+      setShow(false);
     }
   }, [captureResult, elementIds.length]);
 
@@ -60,6 +63,7 @@ const Resume: FC = () => {
       </Fab>
       <FirstPage id='firstPage' />
       <SecondPage id='secondPage' />
+      <Loading show={show} />
     </div>
   );
 };
