@@ -20,14 +20,12 @@ const Resume: FC = () => {
       const elementId = elementIds[i];
       const page = document.getElementById(elementId);
       if (page) {
-        const currentMargin = page.style.margin;
         page.style.margin = '0';
-        var tojs = toJpeg(page, { quality: 1 });
-        Promise.all([tojs]).then((arr) => {
+        const toJpegPromise = toJpeg(page, { quality: 1 });
+        Promise.all([toJpegPromise]).then((arr) => {
           setCaptureResult((current) => {
             return [...arr, ...current];
           });
-          console.log('cc', page.style.margin, currentMargin);
           page.style.margin = '1cm auto';
         });
       }

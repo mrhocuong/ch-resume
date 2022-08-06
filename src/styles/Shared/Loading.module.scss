@@ -1,13 +1,14 @@
 @import '../variables';
 
 .loadingContainer {
-  display: grid;
-  justify-content: center;
-  position: absolute;
+  position: fixed;
   background: $secondary--color;
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
   @keyframes spinner {
     0% {
       transform: rotate(0deg);
