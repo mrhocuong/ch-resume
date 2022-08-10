@@ -72,9 +72,8 @@ const FirstPage: FC<IFirstPageProps> = (props) => {
               subtitle={'Creative Technology - Aurecon Vietnam'}
               note={'12/2020 - Present'}
               achievements={[
+                'Build the code base for BE and FE',
                 "Research and develop solution base on client's requirement",
-                'Coach team members',
-                'Delegating tasks and set deadlines for team',
               ]}
             />
             <ExperienceCard
