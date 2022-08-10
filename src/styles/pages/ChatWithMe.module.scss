@@ -3,14 +3,24 @@ $chat-secondary-color: #454d5b;
 .chatWithMe {
   background-color: $chat-primary-color;
   .chatHeader {
+    display: flex;
     height: 3.125rem;
     position: fixed;
     top: 0;
     width: 100%;
-    text-align: center;
     background-color: $chat-primary-color;
     border-bottom: solid 0.125rem $chat-secondary-color;
     color: #fff;
+    span {
+      align-self: center;
+      padding-left: 20px;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    p {
+      padding-left: 20px;
+    }
   }
   .chatSection {
     position: fixed;

@@ -2,6 +2,9 @@ import { FC } from 'react';
 import Style from '../styles/pages/ChatWithMe.module.scss';
 import avatar from '../assets/avatar.jpg';
 import devAvatar from '../assets/dev-avarta.jpeg';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 
 interface IMessageModel {
   senderId: number;
@@ -9,6 +12,8 @@ interface IMessageModel {
   message: string;
 }
 const ChatWithMe: FC = () => {
+  const navigate = useNavigate();
+
   const userId = 1;
   const chatConst: IMessageModel[] = [
     {
@@ -52,6 +57,13 @@ const ChatWithMe: FC = () => {
   return (
     <div className={Style.chatWithMe}>
       <div className={Style.chatHeader}>
+        <span
+          onClick={() => {
+            navigate('/');
+          }}
+        >
+          <FontAwesomeIcon icon={faHome} />
+        </span>
         <p>Chat With Me</p>
       </div>
       <div className={Style.chatSection}>
