@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import A4Page from './Shared/A4Page';
-import ExperienceCard from './Shared/ExperienceCard';
-import Style from '../styles/SecondPage.module.scss';
+import A4Page from './../Shared/A4Page';
+import ExperienceCard from './../Shared/ExperienceCard';
+import Style from '../../styles/SecondPage.module.scss';
 import Educations from './Educations';
 import Interests from './Interests';
 interface ISecondPageProps {

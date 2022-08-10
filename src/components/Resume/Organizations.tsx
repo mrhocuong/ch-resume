@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import ExperienceCard from './Shared/ExperienceCard';
-import Style from './../styles/Organizations.module.scss';
+import ExperienceCard from './../Shared/ExperienceCard';
+import Style from './../../styles/Organizations.module.scss';
 const Organizations: FC = () => {
   return (
     <>

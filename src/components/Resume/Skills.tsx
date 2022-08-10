@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Tag from './Shared/Tag';
+import Tag from './../Shared/Tag';
 const Skills: FC = () => {
   const skills = [
     'Asp.Net Core',

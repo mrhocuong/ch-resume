@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ExperienceCard from './Shared/ExperienceCard';
+import ExperienceCard from '../Shared/ExperienceCard';
 const Educations: FC = () => {
   return (
     <>

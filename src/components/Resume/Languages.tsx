@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import ExperienceCard from './Shared/ExperienceCard';
-import Style from './../styles/Languages.module.scss';
+import ExperienceCard from './../Shared/ExperienceCard';
+import Style from './../../styles/Languages.module.scss';
 const Languages: FC = () => {
   return (
     <>

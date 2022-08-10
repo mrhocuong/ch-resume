@@ -6,14 +6,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import Style from '../styles/FirstPage.module.scss';
+import Style from '../../styles/FirstPage.module.scss';
 import Organizations from './Organizations';
-import A4Page from './Shared/A4Page';
-import ExperienceCard from './Shared/ExperienceCard';
-import PageTag from './Shared/PageTag';
 import Skills from './Skills';
-import avatar from '../assets/avatar.jpg';
+import avatar from '../../assets/avatar.jpg';
 import Languages from './Languages';
+import A4Page from '../Shared/A4Page';
+import ExperienceCard from '../Shared/ExperienceCard';
+import PageTag from '../Shared/PageTag';
 interface IFirstPageProps {
   id?: string;
 }

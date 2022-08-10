@@ -9,11 +9,11 @@ import jsPDF from 'jspdf';
 import moment from 'moment';
 import { FC, useEffect, useState } from 'react';
 import { Fab, Action } from 'react-tiny-fab';
-import FirstPage from '../components/FirstPage';
-import SecondPage from '../components/SecondPage';
 import Loading from '../components/Shared/Loading';
 import Style from '../styles/pages/Resume.module.scss';
 import { useNavigate } from 'react-router-dom';
+import FirstPage from '../components/Resume/FirstPage';
+import SecondPage from '../components/Resume/SecondPage';
 
 const Resume: FC = () => {
   const navigate = useNavigate();
