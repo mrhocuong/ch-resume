@@ -1,4 +1,67 @@
-@import '../variables';
-.resume {
-  background-color: #fff;
+$chat-primary-color: #2b313b;
+$chat-secondary-color: #454d5b;
+.chatWithMe {
+  background-color: $chat-primary-color;
+  .chatHeader {
+    height: 3.125rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $chat-primary-color;
+    border-bottom: solid 0.125rem $chat-secondary-color;
+    color: #fff;
+  }
+  .chatSection {
+    position: fixed;
+    margin-top: 3.25rem;
+    padding: 1.25rem;
+    background-color: $chat-primary-color;
+    overflow-y: auto;
+    height: 100%;
+    .chatMessage {
+      display: flex;
+      margin-bottom: 1.5rem;
+      .avatar {
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        .sender {
+          color: #43e8ff;
+          font-weight: 500;
+          line-height: 18px;
+          margin-bottom: 0.3125rem;
+        }
+        .message {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .chatInput {
+    display: flex;
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $chat-primary-color;
+    input {
+      height: 3.625rem;
+      margin: 0.625rem;
+      width: inherit;
+      background: $chat-secondary-color;
+      border-radius: 0.5rem;
+      border-style: unset;
+      color: #fff;
+      font-size: 17px;
+      padding-left: 0.625rem;
+    }
+  }
 }
