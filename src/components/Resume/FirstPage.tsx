@@ -1,4 +1,8 @@
-import { faLinkedin, faSkype } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faSkype,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faPhone,
