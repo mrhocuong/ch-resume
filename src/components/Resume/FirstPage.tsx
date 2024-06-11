@@ -72,12 +72,26 @@ const FirstPage: FC<IFirstPageProps> = (props) => {
               hasTag
               cssClasses={Style.experienceCardCustom}
               key={"1-1"}
+              title={" Founder"}
+              subtitle={"Ve vé - Mua vé phải vui!"}
+              note={"08/2023 - Present"}
+              achievements={[
+                "Founding a startup specializing in ticket sales and event management",
+                "Assuming various roles in the project such as Product Owner, Technical Leader, Project Manager, Business Analyst, Tester, and Sales and Marketing",
+                "Managing a Scrum team consisting of 4 members.",
+              ]}
+            />
+            <ExperienceCard
+              hasTag
+              cssClasses={Style.experienceCardCustom}
+              key={"1-2"}
               title={"Senior Full-stack Developer - Technical Leader"}
               subtitle={"Creative Technology - Aurecon Vietnam"}
               note={"12/2020 - Present"}
               achievements={[
-                "Build the code base for BE and FE",
-                "Research and develop solution base on client's requirement",
+                "Developing the code base for both backend and frontend",
+                "Managing code quality and actively resolving production issues",
+                "Conducting research to develop solutions based on client requirements.",
               ]}
             />
             <ExperienceCard
@@ -88,21 +102,8 @@ const FirstPage: FC<IFirstPageProps> = (props) => {
               subtitle={"FPT Software - Vietnam"}
               note={"06/2020 - 12/2020"}
               achievements={[
-                "Research and develop solution base on client's requirement",
-                "Coach team members",
-                "Delegating tasks and set deadlines for team",
-              ]}
-            />
-            <ExperienceCard
-              cssClasses={Style.experienceCardCustom}
-              hasTag
-              key={"2"}
-              title={"Senior Full-stack Software Developer"}
-              note={"01/2018 - 04/2020"}
-              subtitle={"Coinhako - Singapore"}
-              achievements={[
-                "Design and implement the micro-services and scalable system (.Net Core 2.2, Angular 7, VueJs, Redis, Hangfire, Kubernetes, Docker, Azure...etc)",
-                "Manage the team has 5 members by the Scrum process",
+                "Research and develop solutions based on clients' requirements",
+                "Provide coaching to team members.",
               ]}
             />
           </div>

@@ -7,6 +7,11 @@ const Organizations: FC = () => {
       <h2>ORGANIZATIONS</h2>
       <ExperienceCard
         cssClasses={Style.organizationCardCustom}
+        title={"Ve vé (Aug/2023 - Present)"}
+        subtitle={"Founder"}
+      />
+      <ExperienceCard
+        cssClasses={Style.organizationCardCustom}
         title={"Creative Technology - Aurecon Vietnam (12/2020 - Present)"}
         subtitle={"Senior Full-stack Developer"}
       />

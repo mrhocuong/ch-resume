@@ -2,15 +2,13 @@ import { FC } from "react";
 import Tag from "./../Shared/Tag";
 const Skills: FC = () => {
   const skills = [
-    "Asp.Net Core",
-    "Entity Framework",
+    ".Net Core",
+    "EF Core",
     "SignalR",
     "RESTful API",
     "Azure App Service",
     "Azure DevOps",
-    "Azure Service Bus",
     "ReactJs",
-    "VueJs",
     "Git",
     "Redis",
     "Docker",
