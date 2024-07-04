@@ -12,8 +12,8 @@ const Organizations: FC = () => {
       />
       <ExperienceCard
         cssClasses={Style.organizationCardCustom}
-        title={"Creative Technology - Aurecon Vietnam (12/2020 - Present)"}
-        subtitle={"Senior Full-stack Developer"}
+        title={"Creative Technology - Aurecon Vietnam (12/2020 - 07/2024)"}
+        subtitle={"Senior Developer - Team Leader"}
       />
       <ExperienceCard
         cssClasses={Style.organizationCardCustom}

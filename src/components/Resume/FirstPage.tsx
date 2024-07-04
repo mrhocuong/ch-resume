@@ -87,7 +87,7 @@ const FirstPage: FC<IFirstPageProps> = (props) => {
               key={"1-2"}
               title={"Senior Full-stack Developer - Technical Leader"}
               subtitle={"Creative Technology - Aurecon Vietnam"}
-              note={"12/2020 - Present"}
+              note={"12/2020 - 07/2024"}
               achievements={[
                 "Developing the code base for both backend and frontend",
                 "Managing code quality and actively resolving production issues",
